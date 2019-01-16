@@ -1,0 +1,2 @@
+iverilog verilog/calcu-16_tb.v verilog/calcu-16.v verilog/control_unit.v verilog/memory.v verilog/alu.v verilog/instruction_reg.v verilog/program_counter.v verilog/register_file.v -o calcu-16
+./calcu-16

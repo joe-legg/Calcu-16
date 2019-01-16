@@ -1,0 +1,38 @@
+// Name: Counter
+// Description: Count to 65535 then hang.
+//              This program tests the add,
+//              addi, jmp and jeq 
+//              instructions.
+//
+00100001110000000000000001 // addi r0, r7, 1     - Load 1 into r0.
+00100011110000000000000001 // addi r1, r7, 1     - Load 1 into r1.
+00100101111111111111111111 // addi r2, r7, 65535 - Load 65535 into r2.
+00010010000010000000000000 // add r1, r0, r1     - Add r0 to r1.
+01000010100000000000000100 // jeq r1, r2, 4      - Hang if r1 == r2.
+00110000000000000000000011 // jmp 3              - Jump to address 3.
+
+// Name: XOR Cypher
+// Description: Encrypts and decrypts a
+//              value using an XOR cypher.
+//              Tests the XOR instruction.
+//
+// 00100001110101010101010101 // addi r0, r7, 21845 - Load 21845 into r0. This will be the key.
+// 00100011110000000000001111 // addi r1, r7, 16    - Load 16 into r1. This is the value that will be encrypted.
+// 01110110000010000000000000 // xor r3, r0, r1     - XOR r0 and r1 then put the result in r3.
+// 01111000000110000000000000 // xor r4, r0, r3     - Decrypt it and put the result in r4.
+// 00110000000000000000000100 // jmp 4              - Hang.
+
+// Name: Fibonacci Sequence
+// Description: Generates the fibonacci
+//              sequence. There is a
+//              better way to implement
+//              this. I just can't be
+//              bothered to write it
+//              again.
+//
+// 00100001110000000000000001
+// 00100011110000000000000001
+// 00010100000010000000000000
+// 00010011110000000000000000
+// 00010001110100000000000000
+// 00110000000000000000000010
