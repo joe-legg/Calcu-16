@@ -13,13 +13,15 @@ tokens = assembly.split()
 output = ""
 curInstr = ""
 
+jump = False
+
 for tok in tokens:
     if tok == "add":
         curInstr += "0001"
     elif tok == "addi":
         curInstr += "0010"
     elif tok == "jmp":
-        curInstr += "0011"
+        curInstr += "0011000000"
     elif tok == "jeq":
         curInstr += "0100"
     elif tok == "store":

@@ -27,12 +27,12 @@ module calcu16 (
         $readmemb("program.bin", memory); // Load program
         
         // Uncomment for debugging
-        $dumpvars(7, regArray[0], regArray[1], regArray[2], regArray[3], regArray[4], regArray[5],
-               regArray[6], regArray[7]);
+        // $dumpvars(7, regArray[0], regArray[1], regArray[2], regArray[3], regArray[4], regArray[5],
+        //        regArray[6], regArray[7]);
 
-        $monitor("r0 = %b\nr1 = %b\nr2 = %b\nr3 = %b\nr4 = %b\nr5 = %b\nr6 = %b\nr7 = %b\n\n",
-               regArray[0], regArray[1], regArray[2], regArray[3], regArray[4], regArray[5],
-               regArray[6], regArray[7]);
+        // $monitor("r0 = %b\nr1 = %b\nr2 = %b\nr3 = %b\nr4 = %b\nr5 = %b\nr6 = %b\nr7 = %b\n\n",
+        //       regArray[0], regArray[1], regArray[2], regArray[3], regArray[4], regArray[5],
+        //       regArray[6], regArray[7]);
     end
 
     always @(posedge clk) begin

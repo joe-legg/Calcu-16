@@ -10,7 +10,7 @@ module calcu16_tb;
         clk <= 1;
         
         // Uncomment for debugging
-        $dumpvars(0, processor);
+        // $dumpvars(0, processor);
 
         // #40 // Simulation time
         // $finish;
